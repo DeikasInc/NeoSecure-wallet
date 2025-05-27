@@ -3,8 +3,11 @@ import { Stack } from 'expo-router'
 import { Redirect } from 'expo-router'
 
 export default function Layout(){
-    const { isSignedIn } = useUser()
+    const { isSignedIn, isLoaded} = useUser()
 
+    if (!isLoaded) {
+        return null // or a loading spinner
+    }
     if (!isSignedIn) {
         return <Redirect href={'/sign-in'} />
     }
