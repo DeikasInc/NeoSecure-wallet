@@ -5,7 +5,7 @@ import { Alert } from 'react-native';
 
 export const useTransactions = (userId) =>{
 
-    const API_URL = "http://10.14.168.214:5001/api"; // Adjust the URL as necessary
+    const API_URL = "https://neosecure-wallet.onrender.com/api"; // Adjust the URL as necessary
     const [transactions, setTransactions] = useState([]);
 
     const [summary, setSummary] = useState({
